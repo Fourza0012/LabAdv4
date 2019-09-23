@@ -1,9 +1,14 @@
-import React from 'react';
-import Weather from './components/Weather'
-export default class App extends React.Component {
-  render() {
-    return (
-      <Weather zipCode="90110"/>
-    );
-  }
-}
+
+import WeatherScreen from './components/WeatherScreen';
+import ZipCodeScreen from './components/ZipcodeScreen';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+
+const RootStack = createStackNavigator({
+  Weather: WeatherScreen,
+  ZipCode: ZipCodeScreen
+}, {
+    initialRouteName: 'Weather',
+    initialRouteParams: { zipcode: '90110' }
+  });
+export default createAppContainer(RootStack);

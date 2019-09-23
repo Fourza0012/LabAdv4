@@ -16,11 +16,11 @@ export default class Forecast extends React.Component {
     }
 }
 const styles = StyleSheet.create({
-    main: { color: 'white', fontSize: 32, paddingTop: 10, paddingLeft: 15},
-    description: { color: 'white', paddingTop: 25, fontSize: 20 },
+    main: { color: 'white', fontSize: 32},
+    description: { color: 'white', paddingVertical: 20,alignItems: 'center', textAlign: 'center' },
     temp: { color: 'white', fontSize: 32 },
     cel: {color:'white'},
-    alignRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingTop: 25  }
+    alignRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 5  }
 });
 
 
